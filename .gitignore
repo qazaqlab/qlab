@@ -1,0 +1,31 @@
+# Dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# Production build
+dist
+dist-ssr
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary and helper scripts
+*_crops.py
+fetch_*.py
+test_*.py
