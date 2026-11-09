@@ -6,6 +6,14 @@ import {
 import { PRINT_MATERIALS, calculatePrintPrice } from '../data/materials';
 import { findNearestHub } from '../data/cities';
 
+const resolveImgUrl = (src) => {
+  if (!src) return '';
+  if (src.startsWith('http://') || src.startsWith('https://')) return src;
+  const base = import.meta.env.BASE_URL || './';
+  const cleanSrc = src.replace(/^\.?\//, '');
+  return `${base}${cleanSrc}`;
+};
+
 export default function ModelDetailModal({ model, userCity, onClose, onOrderPlaced }) {
   const [selectedMaterial, setSelectedMaterial] = useState(model.specs.recommendedFilament || 'pla-silk');
   const [selectedColor, setSelectedColor] = useState(model.specs.defaultColor);
@@ -114,9 +122,16 @@ export default function ModelDetailModal({ model, userCity, onClose, onOrderPlac
             {/* High-Resolution Photo Display */}
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-[#121212] aspect-[4/3] sm:h-[360px] flex items-center justify-center">
               <img
-                src={model.images[0]}
+                src={resolveImgUrl(model.images[0])}
                 alt={model.title}
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  if (!e.target.dataset.tried) {
+                    e.target.dataset.tried = '1';
+                    const filename = model.images[0].split('/').pop();
+                    e.target.src = `./models/${filename}`;
+                  }
+                }}
               />
               <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md text-[11px] font-medium text-white border border-white/10 flex items-center gap-1.5 shadow">
                 <span className="w-2 h-2 rounded-full bg-[#00ae42]" />

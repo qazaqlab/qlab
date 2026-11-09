@@ -6,6 +6,14 @@ import {
 import { CATALOG_MODELS } from '../data/catalog';
 import ModelDetailModal from './ModelDetailModal';
 
+const resolveImgUrl = (src) => {
+  if (!src) return '';
+  if (src.startsWith('http://') || src.startsWith('https://')) return src;
+  const base = import.meta.env.BASE_URL || './';
+  const cleanSrc = src.replace(/^\.?\//, '');
+  return `${base}${cleanSrc}`;
+};
+
 export default function MakerWorldCatalog({ userCity, onOrderPlaced }) {
   const [selectedCategory, setSelectedCategory] = useState('Все');
   const [selectedTag, setSelectedTag] = useState('Все');
@@ -178,9 +186,16 @@ export default function MakerWorldCatalog({ userCity, onOrderPlaced }) {
               {/* Model Image with green MakerWorld badge in top-left */}
               <div className="relative aspect-[4/3] bg-[#121212] overflow-hidden">
                 <img
-                  src={model.images[0]}
+                  src={resolveImgUrl(model.images[0])}
                   alt={model.title}
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                  onError={(e) => {
+                    if (!e.target.dataset.tried) {
+                      e.target.dataset.tried = '1';
+                      const filename = model.images[0].split('/').pop();
+                      e.target.src = `./models/${filename}`;
+                    }
+                  }}
                 />
 
                 {/* MakerWorld green cube badge (as in screenshot) */}

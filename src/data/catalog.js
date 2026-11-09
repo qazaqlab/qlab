@@ -19,7 +19,7 @@ export const CATALOG_MODELS = [
     description: 'Праздничный функциональный держатель для стандартных рулонов бумажных полотенец. Печатается без сложных поддержек, голова надежно фиксируется на стержне.',
     tags: ['Для дома', 'Рождество', 'Декор', 'Кухня'],
     geometryType: 'mask',
-    images: ['/models/mw_grinch_clean.jpg'],
+    images: ['./models/mw_grinch_clean.jpg'],
     specs: {
       weightGrams: 140,
       printTimeMinutes: 210,
@@ -54,7 +54,7 @@ export const CATALOG_MODELS = [
     description: 'Компактный фиджет весом всего 9.91 грамм. Время печати менее 29 минут. Печатается сразу в собранном виде (Print in Place), плавный тихий ход шарниров.',
     tags: ['Игрушки и игры', 'Антистресс', 'Print in Place', 'Быстрая печать'],
     geometryType: 'gear',
-    images: ['/models/mw_fidget_clean.jpg'],
+    images: ['./models/mw_fidget_clean.jpg'],
     specs: {
       weightGrams: 10,
       printTimeMinutes: 28,
@@ -89,7 +89,7 @@ export const CATALOG_MODELS = [
     description: 'Миниатюрная фигурка с уникальной текстурой вязаного полотна. Идеальна для подарков и сувениров, отлично передает мельчайшие петли нитей при печати соплом 0.4 или 0.2 мм.',
     tags: ['Миниатюры', 'Искусство', 'Сувенир', 'Рождество'],
     geometryType: 'vase',
-    images: ['/models/hd_claus.jpg'],
+    images: ['./models/hd_claus.jpg'],
     specs: {
       weightGrams: 65,
       printTimeMinutes: 140,
@@ -124,7 +124,7 @@ export const CATALOG_MODELS = [
     description: 'Элегантная модель цветка с естественными изогнутыми лепестками. Безупречно смотрится в матовом черном PLA или темно-сером филаменте на подставке.',
     tags: ['Искусство', 'Для дома', 'Декор', 'Цветы'],
     geometryType: 'vase',
-    images: ['/models/hd_rose.jpg'],
+    images: ['./models/hd_rose.jpg'],
     specs: {
       weightGrams: 75,
       printTimeMinutes: 160,
@@ -159,7 +159,7 @@ export const CATALOG_MODELS = [
     description: 'Коллекционный олененок с плетеным вязаным рельефом. Спроектирован под печать на стандартном одном экструдере без системы мультиматериалов (без AMS). Шарф собирается отдельно.',
     tags: ['Игрушки и игры', 'Миниатюры', 'Без AMS', 'Сувенир'],
     geometryType: 'vase',
-    images: ['/models/mw_deer_clean.jpg'],
+    images: ['./models/mw_deer_clean.jpg'],
     specs: {
       weightGrams: 90,
       printTimeMinutes: 195,
@@ -194,7 +194,7 @@ export const CATALOG_MODELS = [
     description: 'Impossible Thread: гайка накручивается в одну сторону, а движется в обе стороны благодаря сдвоенной разнонаправленной спирали. Печать монолитной деталью без сборки.',
     tags: ['Хобби и DIY', 'Инструменты', 'Кинетика', 'Print in Place'],
     geometryType: 'gear',
-    images: ['/models/mw_thread_clean.jpg'],
+    images: ['./models/mw_thread_clean.jpg'],
     specs: {
       weightGrams: 48,
       printTimeMinutes: 75,
@@ -229,7 +229,7 @@ export const CATALOG_MODELS = [
     description: 'Настольная салфетница с традиционным казахским орнаментом. Оптимизирована для печати без поддержек. Подходит для ресторанов, кафе и домашнего интерьера.',
     tags: ['Для дома', 'Искусство', 'Орнамент', 'Казахстан'],
     geometryType: 'ornament_napkin',
-    images: ['/models/clean_napkin.jpg'],
+    images: ['./models/clean_napkin.jpg'],
     specs: {
       weightGrams: 85,
       printTimeMinutes: 135,
@@ -264,7 +264,7 @@ export const CATALOG_MODELS = [
     description: 'CAD-модель шестерни взамен изношенных заводских пластиковых деталей в авто и электроприводах. Скорректированы углы зубьев и усилена ступица. Рекомендуется композит Carbon Fiber (PA-CF).',
     tags: ['Инструменты', '3D-принтер', 'PA-CF', 'Реверс-инжиниринг'],
     geometryType: 'gear',
-    images: ['/models/clean_gear.jpg'],
+    images: ['./models/clean_gear.jpg'],
     specs: {
       weightGrams: 42,
       printTimeMinutes: 90,
@@ -299,7 +299,7 @@ export const CATALOG_MODELS = [
     description: 'Объемная 3D-панель по фотографии. При включении подсветки изображение проявляется за счет разной толщины полимерных слоев. Комплектуется основанием под LED.',
     tags: ['Для дома', 'Искусство', 'Литофания', 'Ночник'],
     geometryType: 'lithophane',
-    images: ['/models/clean_litho_frame.jpg'],
+    images: ['./models/clean_litho_frame.jpg'],
     specs: {
       weightGrams: 110,
       printTimeMinutes: 240,
@@ -334,7 +334,7 @@ export const CATALOG_MODELS = [
     description: 'Прочный монтажный кронштейн взамен сломанного заводского крепежа. Изготавливается из ударопрочного термостойкого PETG, стойкого к перепадам температур и вибрациям.',
     tags: ['Инструменты', 'Хобби и DIY', 'Автодетали', 'PETG'],
     geometryType: 'bracket',
-    images: ['/models/clean_bracket.jpg'],
+    images: ['./models/clean_bracket.jpg'],
     specs: {
       weightGrams: 28,
       printTimeMinutes: 45,
@@ -369,7 +369,7 @@ export const CATALOG_MODELS = [
     description: 'Высокодетализированная фигурка и элементы экипировки. Модели оптимизированы под точную посадку и легкую постобработку грунтовкой и покраской.',
     tags: ['Реквизит и косплей', 'Миниатюры', 'Шлем'],
     geometryType: 'mask',
-    images: ['/models/clean_cosplay.jpg'],
+    images: ['./models/clean_cosplay.jpg'],
     specs: {
       weightGrams: 160,
       printTimeMinutes: 280,
@@ -404,7 +404,7 @@ export const CATALOG_MODELS = [
     description: 'Корпус для часов с возможностью установки стандартного кварцевого механизма. Стильный геометрический циферблат с четкими делениями.',
     tags: ['Для дома', 'Мода', 'Интерьер'],
     geometryType: 'gear',
-    images: ['/models/clean_clock.jpg'],
+    images: ['./models/clean_clock.jpg'],
     specs: {
       weightGrams: 75,
       printTimeMinutes: 120,
